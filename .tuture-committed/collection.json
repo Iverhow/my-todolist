@@ -1,0 +1,1753 @@
+{
+  "name": "My-Todolist",
+  "description": "a demo to learn Angular",
+  "topics": [
+    "Angular"
+  ],
+  "categories": [
+    "Angular"
+  ],
+  "id": "9f23bfbd8d06a278d6f0e73b340cbcad",
+  "created": "2020-05-01T09:48:23.482Z",
+  "articles": [
+    {
+      "name": "一杯茶的时间，上手Angular框架开发",
+      "description": "写在前面的话\n我是在学习React的时候知道图雀社区的，他们的教程写得真的很细致，对我这个初学者而言很友好。而我在工作中学到了一些Angular的知识，也希望将我的一些关于Angular的想法和体会写在这里，我想感激图雀社区对我的指引，做一些回馈和分享，同时也希望能给对Angular感兴趣的初学者一些帮助，当然，由于我也是个菜鸟（只有一年前端开发经验），分享中难免有些错误和不足之处，欢迎各位批评指正，谢谢。",
+      "topics": [
+        "Angular"
+      ],
+      "categories": [
+        "Angular"
+      ],
+      "id": "9f23bfbd8d06a278d6f0e73b340cbcad"
+    }
+  ],
+  "steps": [
+    {
+      "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+      "id": "af375664",
+      "articleId": "9f23bfbd8d06a278d6f0e73b340cbcad",
+      "type": "step",
+      "children": [
+        {
+          "type": "heading-two",
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "id": "b87f6ac6",
+          "fixed": true,
+          "children": [
+            {
+              "text": "为什么要介绍Angular？"
+            }
+          ]
+        },
+        {
+          "type": "explain",
+          "fixed": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "当然，真正的原因是React和Vue我都只是初学者而且没有在实际项目中使用过😹。不过我还想提一点是，我之前是Java开发，当团队因为没有专做前端的同学且因为历史原因需要让我去学习Angular时，我经历了痛苦的开始后，居然觉得一个Java开发转做Angular竟然不是那么难，而且在后期了解了React和Vue的一些知识后，我更坚定了我的这个看法：React很适合已经很擅长JS的同学，而Angular，真的很适合做了很久的Java或者其他后端开发去学。"
+                },
+                {
+                  "text": "所以，如果你是多年后端开发现在需要去做前端，我真的很推荐Angular给你，可能会省去你的很多麻烦。",
+                  "bold": true
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "说了很多，先让大家看下一个最简单，也最基础的Angular脚手架项目是什么样的吧："
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "这里默认大家是安装了node 和 npm的，大家使用Angular时需要先行安装Angular脚手架，可以通过npm安装，打开终端执行"
+                }
+              ]
+            },
+            {
+              "type": "code-block",
+              "children": [
+                {
+                  "type": "code-line",
+                  "children": [
+                    {
+                      "text": "npm install -g @angular/cli"
+                    }
+                  ]
+                }
+              ],
+              "lang": "bash"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "即可全局安装Angular脚手架，随后进入你准备生成项目的父目录（以我想生成一个名为my-todolist的项目为例），执行如下命令"
+                }
+              ]
+            },
+            {
+              "type": "code-block",
+              "children": [
+                {
+                  "type": "code-line",
+                  "children": [
+                    {
+                      "text": "ng new my-todolist"
+                    }
+                  ]
+                }
+              ],
+              "lang": "bash"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "这之后会出现两个选项是否需要Angular routing和选择样式文件类型，因为这两项对我们今天要介绍的最基础的内容影响不大，可以任意选择，我这里选择y和less类型，接着你就会看到一个名为my-todolist的Angular脚手架项目成功生成，如下图所示"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "url": "https://imgkr.cn-bj.ufileos.com/485e6d8c-d8be-461d-b0dd-f2d9fe9f0559.png"
+            },
+            {
+              "type": "image",
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "url": "https://imgkr.cn-bj.ufileos.com/e533139c-53c0-4e47-bd7f-6fbd672c70fd.png"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "之后我们使用你熟悉的IDE(如VSCode或WebStorm等)打开这个项目，参考readme你会发现如下信息："
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": ".editorconfig",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": ".editorconfig",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "file",
+          "file": ".gitignore",
+          "display": false,
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": ".gitignore",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "README.md",
+          "display": true,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "通过如下readme文件你会发现，我们可以通过ng serve命令用于开发调试，使用ng generate xx命令生成组件，指令，管道等等组件，通过ng build执行构建，以及执行单元测试，端到端的测试命令等"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "README.md",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "我们今天介绍的是最简单的ng serve命令和ng generate xx命令，让大家看到一个最简单的Angular项目是怎样添加组件，和使用的。"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "大家在IDE中打开项目同时打开终端，执行"
+                    }
+                  ]
+                },
+                {
+                  "type": "code-block",
+                  "children": [
+                    {
+                      "type": "code-line",
+                      "children": [
+                        {
+                          "text": "ng serve"
+                        }
+                      ]
+                    }
+                  ],
+                  "lang": "bash"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "或者"
+                    }
+                  ]
+                },
+                {
+                  "type": "code-block",
+                  "children": [
+                    {
+                      "type": "code-line",
+                      "children": [
+                        {
+                          "text": "ng serve -o"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "命令即可打开dev server并看到其监听端口，点击链接即可在浏览器中看到该Angular项目界面，添加-o 命令是为了直接在启动dev server后打开浏览器，不必再点击终端的链接（如下图中的链接）"
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/54b849a8-8cc8-4cbc-9823-8cc28c6f29a6.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "接着你会在浏览器中看到如下页面："
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/a603f7d9-11fc-4a52-a0e1-a00bea31d3a4.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "这里有一些关于Angular的学习资源，和你可能相对你的应用进行的操作。"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "当然我们也发现了，这个页面实际上就是src目录下的app.component.html这个页面，那么，我们是否可以做些简单的改写，先将他改为一个hello world的页面呢？我们接下来就演示下。"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "angular.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "angular.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "browserslist",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "browserslist",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "e2e/protractor.conf.js",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "e2e/protractor.conf.js",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "e2e/src/app.e2e-spec.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "e2e/src/app.e2e-spec.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "e2e/src/app.po.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "e2e/src/app.po.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "e2e/tsconfig.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "e2e/tsconfig.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "karma.conf.js",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "karma.conf.js",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "package-lock.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "package-lock.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "package.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "package.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app-routing.module.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app-routing.module.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.html",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "我们会发现这个主页中的多个指导，帮助信息其实是写在app.component.html这个文件中的"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.html",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [
+                [
+                  0,
+                  71
+                ],
+                [
+                  73,
+                  74
+                ],
+                [
+                  127,
+                  128
+                ]
+              ],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.less",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.less",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.spec.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.spec.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.module.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/assets/.gitkeep",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/assets/.gitkeep",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/environments/environment.prod.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/environments/environment.prod.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/environments/environment.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/environments/environment.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/favicon.ico",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/favicon.ico",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/index.html",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/index.html",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/main.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/main.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/polyfills.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/polyfills.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/styles.less",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/styles.less",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/test.ts",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/test.ts",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tsconfig.app.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "tsconfig.app.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tsconfig.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "tsconfig.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tsconfig.spec.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "tsconfig.spec.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tslint.json",
+          "display": false,
+          "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "tslint.json",
+              "commit": "9dbab9dd4c78ac32b01f4fe33ba4fa0cc1e0f0b5",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "explain",
+          "fixed": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "可能大家在这里看到生成了太多文件会觉得很麻烦或者难于理解，不过我们可以先忽略这些，专注于我们开发时最关心的src目录即可，同时我们会发现Angular项目是使用Typescript开发的，如果大家对它不了解的话也可以参考下图雀社区关于Typescript的教程，我感觉它是很适合后端开发学习的，上手也很快，这也是我认为Angular很适合后端开发同学的原因之一。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "github": "https://github.com/Iverhow/my-todolist",
+  "remotes": [
+    {
+      "name": "origin",
+      "refs": {
+        "fetch": "https://github.com/Iverhow/my-todolist",
+        "push": "https://github.com/Iverhow/my-todolist"
+      }
+    }
+  ],
+  "version": "v1"
+}
