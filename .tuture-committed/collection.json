@@ -1737,6 +1737,815 @@
           ]
         }
       ]
+    },
+    {
+      "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+      "id": "05989670",
+      "articleId": "9f23bfbd8d06a278d6f0e73b340cbcad",
+      "type": "step",
+      "children": [
+        {
+          "type": "heading-two",
+          "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+          "id": "5d605301",
+          "fixed": true,
+          "children": [
+            {
+              "text": "先写个简单的Hello World看看"
+            }
+          ]
+        },
+        {
+          "type": "explain",
+          "fixed": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "如上所述，我们主要关注的是src中的内容，那我们先来看下怎么开始，比如写个Hello World,我们顺着上面的思路，因为之前首页的内容是app.component.html页面，因此我们只需要直接编辑该页面即可。"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.html",
+          "display": true,
+          "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "首先我们可以清除之前app.component.html页面的内容，换上我们要显示的内容。这里说个使用WebStorm或者IDEA开发时的技巧，就是我们平时写代码都是“先定义后使用”，这里你可以反其道而行之，先写你要用的变量，方法之类，它会报错，提示你这个变量未定义，同时会有响应的修改建议，比如创建这个变量，你点击创建后，定义这个变量的代码就会出现在相应的ts文件中，如下图所示："
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/a0ee9cfa-8917-4e9a-ab94-08c8c664c1db.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "这里我随意定义了一个变量叫contentCopy，通过双花括号的写法使用它，随后我们会看到该变量下的红线和旁边的小灯泡，表示一个错误提示，点击灯泡或者在鼠标光标在变量内时点击智能建议快捷键（默认Alt+Enter），就会看到修改建议，如下图所示:"
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/3f293784-9cbc-44a0-8e84-7686808f002a.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "点击这里的如上选中的修复方式，就会发现："
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/8e04aefa-c85e-45db-915b-6211a80e7145.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "页面跳到了ts中，并创建了这个变量，接下来你只需要为它定义类型和初始值即可。这样做的好处是，减少了很多类型，返回值的书写，特别是当你明确需要书写一个指定入参类型和返回类型的方法时，先声明后定义的写法会方便很多。"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "好了，言归正传，看下关于app.component.html这个文件的修改，如下"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.html",
+              "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "我们删光了之前的内容，只是添加了一个双花括号包裹的变量content，随后通过我上面说的先定义后声明的方式，对app.component.ts文件的改变如下所示"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "display": true,
+          "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "我们发现，这里自动创建了一个content变量，添加他的类型并对它初始化，同时删除之前AppComponent这个类中的其他内容即可"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.ts",
+              "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+              "hiddenLines": [
+                [
+                  0,
+                  7
+                ],
+                [
+                  10,
+                  10
+                ]
+              ],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "tslint.json",
+          "display": true,
+          "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "这里还有一件值得一提的事，就是如果使用WebStorm的话，它会提示你上述的content不需要写类型，因为“明眼人”一看就知道，初始化为Hello World这个字符串，类型一定是string， 所以你就不用再说明它的类型是string了，如下图所示"
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/6babbdf0-b075-4ed1-8350-327b5529f8b0.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "当然，它说的没错，很多时候，变量的类型是一眼就能看出来的，但是根据Typescript的建议（毕竟ts相比js最大的不同就是引入了类型），我们还是写明它的类型是string比较好，那么，怎么去除这里的红色波浪线提示呢？修改下tslint.json就好了，如下所示"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "tslint.json",
+              "commit": "5bac528396499be14f24ec3fcd61b0e0b2dcc556",
+              "hiddenLines": [
+                [
+                  0,
+                  54
+                ],
+                [
+                  60,
+                  92
+                ]
+              ],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "这里的改动就是去除了对已知类型变量类型声明的错误提示"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "explain",
+          "fixed": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "这时我们再次刷新之前的页面，一个简单的Hello World就出现了。查看代码结构，想必大家很容易发现，比如我们需要对某个页面区域的内容做开发或者修改，在Angular中这个“页面区域”就会对应成一个模块，根据上面的Hello World的例子，这个模块的html内容会写在xxx.component.html中，它的ts内容会写在xxx.component.ts中（不难想见其样式内容会放在xxx.component.less中），这个就和Vue很像了，只不过Vue的一个文件在这里变成了三个文件。接下来我们模仿"
+                },
+                {
+                  "text": "一杯茶的时间，上手 React 框架开发",
+                  "link": true,
+                  "url": "https://tuture.co/2019/11/18/07acf61/"
+                },
+                {
+                  "text": "一文中的例子写个todolist的小功能，帮助大家了解组件的创建和一些常见的语法。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+      "id": "3887709f",
+      "articleId": "9f23bfbd8d06a278d6f0e73b340cbcad",
+      "type": "step",
+      "children": [
+        {
+          "type": "heading-two",
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "id": "6898fbcd",
+          "fixed": true,
+          "children": [
+            {
+              "text": "新建一个组件并使用"
+            }
+          ]
+        },
+        {
+          "type": "explain",
+          "fixed": true,
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "我想在这篇最简单的介绍中介绍常用的命令ng serve 和 ng generate component 这两个命令，第一个上面已经用到了，接下来我们来说下第二个，也即生成组建的命令，如上文所述，一个组件在Vue可能是一个.vue的文件，在Angular中是三个（甚至更多，比如还有测试的ts，module文件等）文件，那么，每新建一个组件都要手动创建那么多文件吗？当然不是。我们可以通过ng generate component xxx这个命令来生成xxx组件，而且这个命令可以简写为ng g c xxx，如下图所示"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "url": "https://imgkr.cn-bj.ufileos.com/1e55f2e2-46d7-432d-89f3-c095d293b2ca.png"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "我们生成了一个名为todolist的组件，大家可以看到在src/app路径下生成了一个todolist文件夹，这个文件夹里生成了该组件相应的样式文件，页面，测试用ts和ts文件，我们要完成todolist的内容，直接编辑这几个文件就行。同事还更新了一个名为app.module.ts的文件，这里我们不展开介绍，目前来说，大家只要知道，这是为了能让使用该组件的地方正确引入，就行了。"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "接下来我们看下想实现的效果"
+                }
+              ]
+            },
+            {
+              "type": "image",
+              "children": [
+                {
+                  "text": ""
+                }
+              ],
+              "url": "https://imgkr.cn-bj.ufileos.com/e5cb3fd0-33bc-4508-8673-649979f4cb34.gif"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.module.ts",
+          "display": false,
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.module.ts",
+              "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/todolist/todolist.component.html",
+          "display": true,
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "简单说下我对这个功能的理解，我们在文本框中输入若干内容，点击提交后添加到下方的todolist列表中，作为区分相邻的todo项颜色不同，通过如下代码简述下"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/todolist/todolist.component.html",
+              "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "我们需要在input输入框中将输入内容绑定在一个变量上，这里我们将这个变量定义为addItem，"
+                    },
+                    {
+                      "text": "[(ngModel)]",
+                      "bold": true
+                    },
+                    {
+                      "text": "的写法是双向绑定，也即初始状态下显示的是addItem的值，在修改文本框内容后这个值会赋给addItem变量，所以我们后续往下面的todoList添加内容时，只要保证点击提交按钮将addItem的值加入到todoList中即可，所以我们需要在提交按钮点击时这个方法中传入addItem的值，并将它放在todoList中，"
+                    },
+                    {
+                      "text": "(click)",
+                      "bold": true
+                    },
+                    {
+                      "text": "就是点击事件的处理方法，类似React中的onClick，只是不用考虑this的绑定或者写成箭头函数这些事，只需要将这个方法的实现写在相应的ts文件中即可。最后说下添加后的展示方式，对于一个包含若干项的数组，我们需要逐个展示，可以通过"
+                    },
+                    {
+                      "text": "*ngFor",
+                      "bold": true
+                    },
+                    {
+                      "text": "这种写法，而如果需要根据变量结果确定不同样式，可以使用"
+                    },
+                    {
+                      "text": "ngStyle",
+                      "bold": true
+                    },
+                    {
+                      "text": "这个指令来设置样式。这里涉及到很多Angular 的基础知识，大家可以根据我的描述先理解一下，如果觉得这门语言还算容易理解，可以参考"
+                    },
+                    {
+                      "text": "Angular的官网",
+                      "link": true,
+                      "url": "https://angular.cn/docs"
+                    },
+                    {
+                      "text": "去了解更多。"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/todolist/todolist.component.less",
+          "display": false,
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/todolist/todolist.component.less",
+              "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/todolist/todolist.component.spec.ts",
+          "display": false,
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/todolist/todolist.component.spec.ts",
+              "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/todolist/todolist.component.ts",
+          "display": true,
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "结合上面html的内容我们再看下ts，如上所述，有一个初始值为空的字符串addItem,有一个用于展示的todoList数组，为了查看方便这里的数组没有初始化为空数组，而是写了两个默认值，这样可以在页面一打开的时候就看到todolist项，还有一个将addItem添加到todolist中的方法，这里值得一提的是这些内容都是先使用后声明的，因为它们都会在html中使用，所以这些属性和方法都是public的，而public访问控制符默认是可以不写的，假如你需要一个只在这个类里用的方法，通过“先使用后声明”的方式创建，它会是一个private的方法。"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/todolist/todolist.component.ts",
+              "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.html",
+          "display": true,
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "最后说下todolist编写完成后，怎么使用。我们只需看下组件的ts文件中的selector，"
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/ff074e95-d470-453d-807d-5d5893924ffe.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "在需要使用它的地方像写div一样写这个标签即可。如下所示"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.html",
+              "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+              "hiddenLines": [],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "回头我们看下这个代码结构："
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/bffc1cbb-7fa0-4d63-b08e-60f3dbcaf505.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": "src下的app文件夹中放置了我们所有的组件，各组件会在其组件名为目录的文件夹下，暴露在最外面的，也是起始页的内容，在app.component.xxx这些文件中。"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "file": "src/app/app.component.ts",
+          "display": false,
+          "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+          "type": "file",
+          "children": [
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "diff-block",
+              "file": "src/app/app.component.ts",
+              "commit": "4c884357f44d0bd1cd838c10fd1e7af5f97e12e6",
+              "hiddenLines": [
+                [
+                  0,
+                  4
+                ]
+              ],
+              "children": [
+                {
+                  "text": ""
+                }
+              ]
+            },
+            {
+              "type": "explain",
+              "fixed": true,
+              "children": [
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "explain",
+          "fixed": true,
+          "children": [
+            {
+              "type": "heading-one",
+              "children": [
+                {
+                  "text": "总结",
+                  "bold": true
+                }
+              ],
+              "id": "btRJZsS6-"
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "text": "这里我们一个基础的组件引用的例子就写好了，通过这个例子主要想让大家了解下Angular脚手架的使用，以及基础的Angular项目的结构，准备的比较匆忙，介绍内容中也有不少冗余信息，希望能给想要了解Angular的同学有些粗略的帮助，最后还想强调一下，如果觉得它还有点意思，通过"
+                },
+                {
+                  "text": "官网",
+                  "link": true,
+                  "url": "https://angular.cn/docs"
+                },
+                {
+                  "text": "了解是个不错的选择~当然，如果时间允许，我也想尽量多的给大家介绍一些Angular的学习体会，希望能跟大家共同成长，谢谢。"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "github": "https://github.com/Iverhow/my-todolist",
