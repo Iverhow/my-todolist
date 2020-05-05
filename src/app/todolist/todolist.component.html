@@ -1,0 +1,11 @@
+<div>
+  <div>
+    <input type="text" [(ngModel)]="addItem" />
+    <button (click)="add2List(addItem)">提交</button>
+  </div>
+  <div>
+    <ul *ngFor="let item of todoList; let i = index">
+      <li [ngStyle]="{'color':i % 2 === 0 ? 'black' : 'red' }">{{item}}</li>
+    </ul>
+  </div>
+</div>
