@@ -2436,6 +2436,40 @@
                   "type": "paragraph",
                   "children": [
                     {
+                      "text": "看下运行结果"
+                    }
+                  ]
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/ac93b0fb-9c77-4b87-98a2-710e765ef619.png"
+                },
+                {
+                  "type": "image",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ],
+                  "url": "https://imgkr.cn-bj.ufileos.com/5518e057-2ab0-45be-9226-9261d7b088d4.png"
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
+                      "text": ""
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "children": [
+                    {
                       "text": "回头我们看下这个代码结构："
                     }
                   ]
@@ -2531,7 +2565,7 @@
               "type": "paragraph",
               "children": [
                 {
-                  "text": "这里我们一个基础的组件引用的例子就写好了，通过这个例子主要想让大家了解下Angular脚手架的使用，以及基础的Angular项目的结构，准备的比较匆忙，介绍内容中也有不少冗余信息，希望能给想要了解Angular的同学有些粗略的帮助，最后还想强调一下，如果觉得它还有点意思，通过"
+                  "text": "这里我们一个基础的组件引用的例子就写好了（Demo代码目录），通过这个例子主要想让大家了解下Angular脚手架的使用，以及基础的Angular项目的结构，准备的比较匆忙，介绍内容中也有不少冗余信息，希望能给想要了解Angular的同学有些粗略的帮助，最后还想强调一下，如果觉得它还有点意思，通过"
                 },
                 {
                   "text": "官网",
